@@ -61,7 +61,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 39 entries
+- [Classification & Routing](categories/classification-routing.md) — 40 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 32 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 32 entries
@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 28 entries
 - [Calibration & Research](categories/calibration-research.md) — 29 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 74 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 75 entries
 - [Game & Simulation](categories/game-simulation.md) — 21 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -154,6 +154,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [langchain-skill-router](https://github.com/deyna256/langchain-skill-router) - Agent infrastructure: per-turn skill routing for LangChain deepagents, where Jev ranks the SKILL.md catalog against the request and the recent conversation and verifies the top candidates, so only the picked skill's instructions reach the prompt; the judge is a protocol that a self-hosted model or static rules can implement instead.
 - [jev-rental](https://github.com/klauswg/jev-suite/tree/master/jev-rental) - Consumer rental: sorts every claim in a rental listing into verify-on-site / demand-evidence / high-risk-pitch buckets to build a pre-viewing checklist with code-templated questions; 50-sample calibration reports 0.910 gated accuracy and 0/10 injection flips.
 - [jev-resume-disqualifier](https://github.com/AiPersonacademy/jev-resume-disqualifier) - Recruiting: knocks a resume out of a pipeline in under 25 ms by asking Jev the disqualifying question first, so only survivors reach a full evaluation.
+- [Jev-IOT](https://github.com/pjmenon45/Jev-IOT) - Smart Utilities & Telecommunications: Ultra-low-cost, non-autoregressive AI telemetry classifier enabling sub-150ms anomaly triage and autonomic remediation across 10M+ smart meters for under $35/month.
 
 ### Adaptive & Realtime UI
 
@@ -453,6 +454,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [Qwev](https://github.com/HopLee6/Qwev) ![type: self-hosted](https://img.shields.io/badge/type-self--hosted-4B5563?style=flat-square) - Local inference: turns dense Qwen3 and Qwen3.5 checkpoints into a training-free Jev-style `Noul`, `Choice`, and `Score` service that shares one state prefill across isolated questions and, on its included 27-question Qwen3.5-9B/A100 fixture, reports 0.500 s versus 13.554 s for generated JSON.
 - [jev-sdk-go](https://github.com/HomayoonAlimohammadi/jev-sdk-go) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) - Go ecosystem: dependency-free Go 1.24+ client for Jev `Noul`, `Choice` and `Score` questions that reads `Choice` and `Score` answers back as the caller's own types, rejecting any label or level the question never offered, with retries, OpenRouter support, and eleven examples tested against an in-process fake of the API.
 - [typesafeai-dotnet-sdk](https://github.com/saibimajdi/typesafeai-dotnet-sdk) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) - .NET ecosystem: community .NET SDK for the TypeSafe AI System One API with strongly-typed Noul, Choice, and Score questions and structured answers.
+- [jevcompat](https://github.com/mandu5/jevcompat) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) - Interoperability: a 48-requirement spec of the `POST /v1/systemone` wire contract, each rule citing TypeSafe's docs, OpenAPI file or SDKs, and a suite that checks any Jev-compatible server against it (`Choice` probabilities keyed by option and summing to 1, `Score` equal to Σ i·p, 2–255 options, error shapes, answers that stay put when question ids or order change), finding 2 of the 8 most-starred open ports conformant, with a reference mock that breaks each rule on purpose and a proxy that fixes what can be fixed.
 
 ### Game & Simulation
 
