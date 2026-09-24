@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 41 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 34 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 34 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 35 entries
 - [Agent Decisions](categories/agent-decisions.md) — 50 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 31 entries
@@ -219,6 +219,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jev-ai-detector](https://github.com/igloomatics/jev-ai-detector) ![type: extension](https://img.shields.io/badge/type-extension-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/igloomatics/jev-ai-detector?style=flat-square&label=%E2%98%85) - Writing analysis: Chrome extension which gives readers an instant, uncertainty-aware signal for how strongly selected webpage text resembles AI-generated writing, using Jev inline in Chrome without interrupting reading.
 - [jev-bfs](https://github.com/komikat/jev-bfs) ![stars](https://img.shields.io/github/stars/komikat/jev-bfs?style=flat-square&label=%E2%98%85) - Search tooling: finds link paths between English Wikipedia articles by having Jev rank each page's outgoing links while Python controls the search.
 - [Jev Search](https://github.com/superagents-lab/jev-search) ![stars](https://img.shields.io/github/stars/superagents-lab/jev-search?style=flat-square&label=%E2%98%85) - Web search: uses Jev Noul judgments on result titles and snippets to rank Search1API results by relevance, with application code merging duplicate URLs and grouping lower-scoring matches separately.
+- [Tweet Radar](https://github.com/kelaocai/tweet-radar) ![stars](https://img.shields.io/github/stars/kelaocai/tweet-radar?style=flat-square&label=%E2%98%85) - Social reading: uses Jev `Noul` to score already-loaded X posts against a reader's goal and profile, then pairwise `Choice` judgments to rank eligible matches and surface up to three for review.
 - [pagegrade](https://github.com/kitze/pagegrade) ![stars](https://img.shields.io/github/stars/kitze/pagegrade?style=flat-square&label=%E2%98%85) - Content quality: grades page sections for clarity, writing, and on-page SEO with Jev and returns per-section scores.
 - [jev-scout](https://github.com/AkashPriyadarshii/jev-scout) ![stars](https://img.shields.io/github/stars/AkashPriyadarshii/jev-scout?style=flat-square&label=%E2%98%85) - Developer tooling: sub-second zero-hallucination open-source repo and crate scout using TypeSafe Jev speculative fan-out scoring.
 - [jev-seo](https://github.com/AkashPriyadarshii/jev-seo) ![stars](https://img.shields.io/github/stars/AkashPriyadarshii/jev-seo?style=flat-square&label=%E2%98%85) - Zero-cost, agent-first SEO & Generative Engine Optimization (GEO) search radar CLI suite and MCP server powered by DuckDuckGo and TypeSafe Jev System One.
