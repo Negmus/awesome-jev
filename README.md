@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 9 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 34 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 35 entries
-- [Agent Decisions](categories/agent-decisions.md) — 50 entries
+- [Agent Decisions](categories/agent-decisions.md) — 51 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 31 entries
 - [Calibration & Research](categories/calibration-research.md) — 32 entries
@@ -306,6 +306,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [Jev-cu](https://github.com/Sac-Y/Jev-cu) ![stars](https://img.shields.io/github/stars/Sac-Y/Jev-cu?style=flat-square&label=%E2%98%85) - Computer use: drives a GUI through Jev decisions with a `jev-decide` script and ships a P0 case set taken from accessibility-tree snapshots of a calculator, a calendar, and the NetEase home screen.
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) ![agent: Claude Code](https://img.shields.io/badge/agent-Claude%20Code-C1512C?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/Dicklesworthstone/skillranker?style=flat-square&label=%E2%98%85) - Coding agents: standalone Rust CLI that uses Jev to rank candidate skills against live session context, advising the next step through a Claude Code UserPromptSubmit hook.
 - [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) ![stars](https://img.shields.io/github/stars/Significant-Gravitas/AutoGPT?style=flat-square&label=%E2%98%85) - Autonomous agents: open-source autonomous agent platform featuring first-class TypeSafe Jev decision blocks for typed routing, filtering, scoring, and confidence-gated next-action dispatching.
+- [dsh-jev-decide](https://github.com/nanami-0713/dsh-jev-decide) ![stars](https://img.shields.io/github/stars/nanami-0713/dsh-jev-decide?style=flat-square&label=%E2%98%85) - Coding agents: DeepSeek Harness plugin whose single `jev_decide` tool lets the agent ask a `Noul`, `Choice`, or `Score` question about any state — urgency triage, intent routing, guardrail checks — and gate on the returned probability or confidence in code instead of trusting the chat model's guess.
 
 ### Data Labeling & Curation
 
