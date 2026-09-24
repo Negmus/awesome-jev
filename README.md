@@ -70,7 +70,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 28 entries
 - [Calibration & Research](categories/calibration-research.md) — 29 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 74 entries
-- [Game & Simulation](categories/game-simulation.md) — 20 entries
+- [Game & Simulation](categories/game-simulation.md) — 21 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 8 entries
@@ -478,6 +478,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [Laya vs Jev arena](https://github.com/PromptEngineer48/laya-vs-jev-arena) - Model comparison: races an open local model against Jev through Snake and a Mortal-Kombat-style arena, the same game code driving both.
 - [JEV-Star](https://github.com/sc2musa/Jev_Star) - Gaming: uses Jev `Choice` decisions for StarCraft II macro control and micromanagement on 35 SMAC-Hard maps, validates selections against available actions, and follows optional GPT-6 plans to separate frequent action selection from longer-term strategy.
 - [THE HUNDRED EYES](https://github.com/mintannn/THE-HUNDRED-EYES) - Interactive media art: asks Jev one `Choice` and four `Score` questions per fictional observer to animate 100 eyes from a shared post, revealing four amplified voices before equal-count analytics expose the full distribution of reactions.
+- [jev-pilot-reflex](https://github.com/manhua-man/jev-pilot-reflex) - Autonomous vehicle simulation: Three.js autonomous driving reflex and AI safety brake simulator using Jev System 1/2 dual-brain architecture for fast emergency intervention.
 
 ### Finance & Trading
 
