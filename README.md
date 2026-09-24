@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 30 entries
 - [Calibration & Research](categories/calibration-research.md) — 30 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 77 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 78 entries
 - [Game & Simulation](categories/game-simulation.md) — 21 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 2 entries
@@ -465,6 +465,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [jevcompat](https://github.com/mandu5/jevcompat) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/mandu5/jevcompat?style=flat-square&label=%E2%98%85) - Interoperability: a 48-requirement spec of the `POST /v1/systemone` wire contract, each rule citing TypeSafe's docs, OpenAPI file or SDKs, and a suite that checks any Jev-compatible server against it (`Choice` probabilities keyed by option and summing to 1, `Score` equal to Σ i·p, 2–255 options, error shapes, answers that stay put when question ids or order change), finding 2 of the 8 most-starred open ports conformant, with a reference mock that breaks each rule on purpose and a proxy that fixes what can be fixed.
 - [typesafe-ai (Rust)](https://github.com/Twister915/typesafe-ai) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/Twister915/typesafe-ai?style=flat-square&label=%E2%98%85) - Rust ecosystem: typed TypeSafe AI client with async (reqwest) and blocking (ureq) backends, deserializing Noul, Choice, and Score responses into Rust enums with observable retry streams.
 - [Pydantic AI](https://github.com/pydantic/pydantic-ai) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/pydantic/pydantic-ai?style=flat-square&label=%E2%98%85) - Python ecosystem: official Pydantic AI agent framework shipping first-class `TypeSafeModel` integration to map Pydantic schema fields into typed Jev System One questions with confidence scoring.
+- [Milvus Model](https://github.com/milvus-io/milvus-model) ![stars](https://img.shields.io/github/stars/milvus-io/milvus-model?style=flat-square&label=%E2%98%85) - Search infrastructure: batches candidate-document Noul questions through Jev and returns score-sorted results with original indices through a Python reranker adapter.
 
 ### Game & Simulation
 
