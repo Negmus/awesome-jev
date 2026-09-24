@@ -70,7 +70,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 28 entries
 - [Calibration & Research](categories/calibration-research.md) — 28 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 74 entries
-- [Game & Simulation](categories/game-simulation.md) — 19 entries
+- [Game & Simulation](categories/game-simulation.md) — 20 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 8 entries
@@ -475,6 +475,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [kNES](https://github.com/ArturSkowronski/kNES) - Gaming: a Kotlin NES emulator whose agent plays Super Mario Bros. and Final Fantasy through SemIf, the open implementation of the Jev interface, on a local Qwen3.5-4B reading the screen itself; the goals that apply this turn become the declared options of one typed `Choice`, so a button the game does not offer is impossible rather than unlikely, and 900 logged decisions at ~400 ms each on an M5 Pro never once answered off the menu.
 - [Laya vs Jev arena](https://github.com/PromptEngineer48/laya-vs-jev-arena) - Model comparison: races an open local model against Jev through Snake and a Mortal-Kombat-style arena, the same game code driving both.
 - [JEV-Star](https://github.com/sc2musa/Jev_Star) - Gaming: uses Jev `Choice` decisions for StarCraft II macro control and micromanagement on 35 SMAC-Hard maps, validates selections against available actions, and follows optional GPT-6 plans to separate frequent action selection from longer-term strategy.
+- [THE HUNDRED EYES](https://github.com/mintannn/THE-HUNDRED-EYES) - Interactive media art: asks Jev one `Choice` and four `Score` questions per fictional observer to animate 100 eyes from a shared post, revealing four amplified voices before equal-count analytics expose the full distribution of reactions.
 
 ### Finance & Trading
 
