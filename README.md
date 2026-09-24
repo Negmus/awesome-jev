@@ -72,7 +72,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 77 entries
 - [Game & Simulation](categories/game-simulation.md) — 21 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
-- [Compliance & Legal](categories/compliance-legal.md) — 1 entry
+- [Compliance & Legal](categories/compliance-legal.md) — 2 entries
 - [Content Moderation](categories/content-moderation.md) — 8 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 79 entries
 
@@ -505,6 +505,7 @@ Source file: [`categories/finance-trading.md`](categories/finance-trading.md)
 Source file: [`categories/compliance-legal.md`](categories/compliance-legal.md)
 
 - [LegalForecast-MTD](https://github.com/johnhughes3/LegalForecastBench) ![stars](https://img.shields.io/github/stars/johnhughes3/LegalForecastBench?style=flat-square&label=%E2%98%85) - Legal forecasting: benchmark that asks Jev to predict federal motion-to-dismiss rulings from the judge's written record and scores the calibrated probabilities with claim-defendant micro-Brier metrics.
+- [Jev Policy Engine](https://github.com/BhavinM/jev-policy-engine) ![stars](https://img.shields.io/github/stars/BhavinM/jev-policy-engine?style=flat-square&label=%E2%98%85) - Policy conformance: universal Policy-as-Code SDK that allows DevOps and security teams to enforce deterministic AI governance rules in YAML via Jev with audit mode and fail-closed controls.
 
 ### Content Moderation
 
