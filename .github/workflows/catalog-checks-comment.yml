@@ -1,0 +1,58 @@
+name: Catalog checks comment
+
+# Tells a contributor, on their own pull request, what catalog-checks.yml found
+# and how to fix it, so a failing PR goes back to its author instead of being
+# repaired by hand at merge time.
+#
+# A fork's pull-request token is read-only, so the check job cannot comment.
+# This runs after it, in the base repository, and turns the report it uploaded
+# into one comment per pull request, edited in place on every push.
+#
+# Safe by construction: it checks out only the default branch (for the comment
+# script), never pull-request code. The report is data — rendered only inside
+# code blocks — and its PR number is used only when that PR's head is the
+# commit the check ran on.
+#
+# A first-time contributor's run waits for approval ("action_required") and
+# uploads nothing, so the comment arrives once a maintainer approves the run.
+
+on:
+  workflow_run:
+    workflows: ["Catalog checks"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  comment:
+    if: >-
+      github.event.workflow_run.event == 'pull_request' &&
+      (github.event.workflow_run.conclusion == 'success' ||
+       github.event.workflow_run.conclusion == 'failure')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/scripts
+
+      - uses: actions/download-artifact@v4
+        # A run from before this workflow existed has no report; the script
+        # then finds no PR number and does nothing.
+        continue-on-error: true
+        with:
+          name: catalog-checks-report
+          path: ${{ runner.temp }}/report
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - uses: actions/github-script@v7
+        env:
+          REPORT_DIR: ${{ runner.temp }}/report
+        with:
+          script: |
+            const run = require('./.github/scripts/catalog-checks-comment.js');
+            await run({ github, context, core });

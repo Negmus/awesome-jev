@@ -4,6 +4,11 @@ name: Catalog checks
 # This job regenerates it and fails if the result differs from what is committed,
 # so a hand-edited README or a forgotten regeneration is caught in review rather
 # than silently reverted by the next person who runs the script.
+#
+# On a pull request every check runs even after an earlier one fails, and the
+# results are uploaded as an artifact. catalog-checks-comment.yml turns that into
+# a comment on the pull request asking the author to fix it: a fork's token is
+# read-only, so this job cannot comment itself.
 
 on:
   pull_request:
@@ -26,6 +31,9 @@ jobs:
       # Secrets cannot appear in a step `if`, so expose only whether one is set.
       # Pull requests from forks never receive secrets, and the scan step skips.
       HAS_JEV_KEY: ${{ secrets.TYPESAFE_API_KEY != '' }}
+      # Logs for the pull-request comment. Outside the checkout, so the drift
+      # check never sees it.
+      REPORT: /tmp/catalog-report
     steps:
       - uses: actions/checkout@v4
         with:
@@ -37,20 +45,38 @@ jobs:
           python-version: "3.11"
 
       - name: Regenerate README
+        id: regen
         run: |
           set -o pipefail
-          python3 scripts/build-readme.py 2>&1 | tee build.log
+          mkdir -p "$REPORT"
+          python3 scripts/build-readme.py 2>&1 | tee build.log "$REPORT/build.txt"
 
       - name: Fail on unknown tags
+        id: tags
+        if: ${{ !cancelled() && steps.regen.outcome == 'success' }}
         run: |
           if grep -q "unknown tag" build.log; then
             echo "::error::A category file uses a tag value that is not in the vocabulary."
             echo "The generator drops unknown tags, so the badge would silently go missing."
-            grep "unknown tag" build.log
+            grep "unknown tag" build.log | tee "$REPORT/tags.txt"
+            exit 1
+          fi
+
+      - name: Fail on duplicate entries
+        id: duplicates
+        if: ${{ !cancelled() && steps.regen.outcome == 'success' }}
+        run: |
+          # The generator only warns; the maintainer merge script refuses to merge
+          # a duplicate, so fail here where the author can see it.
+          if grep -q "duplicate sources" build.log; then
+            echo "::error::The same repository is listed more than once."
+            grep -A20 "duplicate sources" build.log | grep "appears in" | tee "$REPORT/duplicates.txt"
             exit 1
           fi
 
       - name: Fail on drift
+        id: drift
+        if: ${{ !cancelled() && steps.regen.outcome == 'success' }}
         run: |
           # CONTRIBUTING.md is only rewritten once the vocabulary table is
           # generated; until then this simply never differs.
@@ -59,16 +85,24 @@ jobs:
             echo "Edit the category file or tags.json, then run:"
             echo "  python3 scripts/build-readme.py"
             echo "and commit the regenerated files."
-            git diff -- README.md CONTRIBUTING.md
+            git diff -- README.md CONTRIBUTING.md | tee "$REPORT/drift.txt"
             exit 1
           fi
           echo "Generated files are in sync with their sources."
 
       - name: Audit tags against entry text
-        run: python3 scripts/audit-tags.py categories
+        id: audit
+        if: ${{ !cancelled() }}
+        run: |
+          set -o pipefail
+          python3 scripts/audit-tags.py categories 2>&1 | tee "$REPORT/audit.txt"
 
       - name: Test jev-ray (offline)
-        run: python3 -m unittest discover -s scripts/tests
+        id: tests
+        if: ${{ !cancelled() }}
+        run: |
+          set -o pipefail
+          python3 -m unittest discover -s scripts/tests 2>&1 | tee "$REPORT/tests.txt"
 
       # Asks Jev about the repositories of entries this pull request adds or edits
       # and reports, as annotations on the diff, tags it would add and hand tags
@@ -80,3 +114,36 @@ jobs:
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
         run: python3 scripts/jev-ray.py check --changed-since "origin/${{ github.base_ref }}" --no-cache
+
+      - name: Record results for the pull-request comment
+        if: ${{ !cancelled() && github.event_name == 'pull_request' }}
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          O_REGEN: ${{ steps.regen.outcome }}
+          O_TAGS: ${{ steps.tags.outcome }}
+          O_DUPLICATES: ${{ steps.duplicates.outcome }}
+          O_DRIFT: ${{ steps.drift.outcome }}
+          O_AUDIT: ${{ steps.audit.outcome }}
+          O_TESTS: ${{ steps.tests.outcome }}
+        run: |
+          mkdir -p "$REPORT"
+          echo "$PR_NUMBER" > "$REPORT/pr-number"
+          echo "$HEAD_SHA" > "$REPORT/head-sha"
+          {
+            echo "regen=$O_REGEN"
+            echo "tags=$O_TAGS"
+            echo "duplicates=$O_DUPLICATES"
+            echo "drift=$O_DRIFT"
+            echo "audit=$O_AUDIT"
+            echo "tests=$O_TESTS"
+          } > "$REPORT/outcomes"
+          git diff --name-only "$BASE_SHA...$HEAD_SHA" > "$REPORT/changed-files" || true
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() && github.event_name == 'pull_request' }}
+        with:
+          name: catalog-checks-report
+          path: /tmp/catalog-report
+          retention-days: 7

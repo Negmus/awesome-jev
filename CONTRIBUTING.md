@@ -255,6 +255,8 @@ Is there a standalone repo or project page?
 python3 scripts/build-readme.py
 ```
 
+The *Catalog checks* workflow re-runs this on every pull request. If your entry fails a check — a stale or hand-edited `README.md`, an unknown tag, a duplicate — a bot comments on the pull request with what failed and how to fix it. Fix it on your branch and push; the comment updates itself.
+
 ## Style guidance
 
 - Keep wording concrete.
