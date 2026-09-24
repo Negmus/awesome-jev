@@ -142,21 +142,49 @@ def badge_html(kind: str, value: str) -> str:
     return f"![{alt}](https://img.shields.io/badge/{text}-{color}?style=flat-square)"
 
 
+REPO_RE = re.compile(r"https?://github\.com/([^/\s)]+)/([^/\s)#]+)")
+
+
+def star_badge(head: str) -> str:
+    """GitHub 条目的星数 badge（issue #188）。
+
+    用 shields.io 的动态 badge，URL 从条目链接推导 —— 星数不写进 README。
+    写死数字会立刻过期（星数每天都在变），也会让 CI 的漂移检查失去意义：
+    每次重建都会产生一个数字不同的 diff。动态 badge 则永远跟着仓库走，
+    重建结果稳定，不需要任何网络请求。
+
+    `.../tree/main/sub` 这类子路径只取 owner/repo，badge 才指向真正的仓库。
+    """
+    m = REPO_RE.search(head)
+    if not m:
+        return ""
+    owner, repo = m.group(1), m.group(2)
+    if repo.endswith(".git"):
+        repo = repo[:-4]
+    return (
+        f"![stars](https://img.shields.io/github/stars/{owner}/{repo}"
+        "?style=flat-square&label=%E2%98%85)"
+    )
+
+
 def render_entry(line: str) -> tuple[str, dict[str, str]]:
     """把条目里的标签块换成 badges，返回 (渲染后的行, 标签)。"""
     m = ENTRY_RE.match(line)
     if not m:
         return line, {}
     head, raw_tags, desc = m.group(1), m.group(2) or "", m.group(3)
-    if not raw_tags:
-        return line, {}
-    tags, unknown = parse_tags(raw_tags)
-    if unknown:
-        print(f"⚠️  unknown tag(s) {unknown} — {line[:80]}")
-    badges = " ".join(badge_html(k, tags[k]) for k in ("agent", "type") if k in tags)
+    tags: dict[str, str] = {}
+    if raw_tags:
+        tags, unknown = parse_tags(raw_tags)
+        if unknown:
+            print(f"⚠️  unknown tag(s) {unknown} — {line[:80]}")
+    badges = [badge_html(k, tags[k]) for k in ("agent", "type") if k in tags]
+    stars = star_badge(head)
+    if stars:
+        badges.append(stars)
     if not badges:
-        return f"{head} - {desc}", {}
-    return f"{head} {badges} - {desc}", tags
+        return line, {}
+    return f"{head} {' '.join(badges)} - {desc}", tags
 
 CATEGORIES = [
     "classification-routing.md",
