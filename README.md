@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 33 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 32 entries
-- [Agent Decisions](categories/agent-decisions.md) — 49 entries
+- [Agent Decisions](categories/agent-decisions.md) — 50 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 29 entries
 - [Calibration & Research](categories/calibration-research.md) — 29 entries
@@ -297,6 +297,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [mobile-jev](https://github.com/droidrun/mobile-jev) ![stars](https://img.shields.io/github/stars/droidrun/mobile-jev?style=flat-square&label=%E2%98%85) - Mobile agents: puts Jev into on-device screen-aware action selection for the Droidrun loop, with a Jev Studio web app streaming live device and decision telemetry.
 - [Jev-cu](https://github.com/Sac-Y/Jev-cu) ![stars](https://img.shields.io/github/stars/Sac-Y/Jev-cu?style=flat-square&label=%E2%98%85) - Computer use: drives a GUI through Jev decisions with a `jev-decide` script and ships a P0 case set taken from accessibility-tree snapshots of a calculator, a calendar, and the NetEase home screen.
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) ![agent: Claude Code](https://img.shields.io/badge/agent-Claude%20Code-C1512C?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/Dicklesworthstone/skillranker?style=flat-square&label=%E2%98%85) - Coding agents: standalone Rust CLI that uses Jev to rank candidate skills against live session context, advising the next step through a Claude Code UserPromptSubmit hook.
+- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) ![stars](https://img.shields.io/github/stars/Significant-Gravitas/AutoGPT?style=flat-square&label=%E2%98%85) - Autonomous agents: open-source autonomous agent platform featuring first-class TypeSafe Jev decision blocks for typed routing, filtering, scoring, and confidence-gated next-action dispatching.
 
 ### Data Labeling & Curation
 
