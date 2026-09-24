@@ -82,9 +82,10 @@ sync_readme() {
 # main 的历史里留一个红叉。先在分支上补建 README 并推回 fork，合并提交就能落地即绿。
 green_branch_first() {
   local n="$1" fork="$2" branch="$3" tmp="tmp-green-$n" remote url
-  git fetch -q origin "pull/$n/head:$tmp" 2>/dev/null || { info "· 取不到 PR head，跳过预补建"; return 0; }
-  git checkout -q "$tmp" 2>/dev/null || { info "· 切换失败，跳过预补建"; return 0; }
+  git fetch -q origin "pull/$n/head:$tmp" 2>/dev/null || { info "· 取不到 PR head"; return 1; }
+  git checkout -q "$tmp" 2>/dev/null || { info "· 切换失败"; return 1; }
   python3 scripts/build-readme.py >/dev/null 2>&1 || true
+  local ok=0
   if [ -z "$(git status --porcelain)" ]; then
     info "· 分支 README 已是最新，无需预补建"
   else
@@ -97,11 +98,15 @@ green_branch_first() {
     if git push -q "$remote" "$tmp:$branch" --force-with-lease 2>/dev/null; then
       info "已把 README 补建推回分支（合并提交将落地即绿）"
     else
-      info "⚠ README 补建推送失败，合并提交会是红的"
+      # 贡献者没开 maintainerCanModify 时推不回去。此时合并提交必然因 README 落后而变红，
+      # 只能合并后在 main 上补（返回值通知调用方走后置补建）。
+      info "⚠ README 补建推不回 fork（贡献者未开 maintainer 编辑权限），改为合并后在 main 上补"
+      ok=1
     fi
   fi
   git checkout -q main 2>/dev/null
   git branch -q -D "$tmp" 2>/dev/null
+  return $ok
 }
 
 added_line_for() {
@@ -289,10 +294,15 @@ for n in "${PRS[@]}"; do
   sync_main || { info "✗ main 同步失败"; continue; }
 
   if wait_mergeable "$n"; then
-    green_branch_first "$n" "$fork" "$branch"
+    if green_branch_first "$n" "$fork" "$branch"; then prepped=1; else prepped=0; fi
     if gh pr merge "$n" --merge --subject "Merge pull request #$n from $fork" >/dev/null 2>&1; then
-      info "✓ 直接合并（分支已自洽，合并提交为绿）"
-      sync_main
+      if [ "$prepped" = 1 ]; then
+        info "✓ 直接合并（分支已自洽，合并提交为绿）"
+        sync_main
+      else
+        info "✓ 直接合并（分支未能预补建，随后在 main 上补 README）"
+        sync_readme
+      fi
       continue
     fi
     info "直接合并失败，转 rebase"
