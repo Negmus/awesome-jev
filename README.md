@@ -61,7 +61,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 41 entries
+- [Classification & Routing](categories/classification-routing.md) — 42 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 9 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 34 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 35 entries
@@ -157,6 +157,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [jev-resume-disqualifier](https://github.com/AiPersonacademy/jev-resume-disqualifier) ![stars](https://img.shields.io/github/stars/AiPersonacademy/jev-resume-disqualifier?style=flat-square&label=%E2%98%85) - Recruiting: knocks a resume out of a pipeline in under 25 ms by asking Jev the disqualifying question first, so only survivors reach a full evaluation.
 - [Jev-IOT](https://github.com/pjmenon45/Jev-IOT) ![stars](https://img.shields.io/github/stars/pjmenon45/Jev-IOT?style=flat-square&label=%E2%98%85) - Smart Utilities & Telecommunications: Ultra-low-cost, non-autoregressive AI telemetry classifier enabling sub-150ms anomaly triage and autonomic remediation across 10M+ smart meters for under $35/month.
 - [AgentScope](https://github.com/agentscope-ai/agentscope) ![stars](https://img.shields.io/github/stars/agentscope-ai/agentscope?style=flat-square&label=%E2%98%85) - Multi-agent platforms: multi-agent platform by Alibaba implementing native TypeSafe Jev classification models for binary, choice, and score routing across agent pipelines.
+- [inbox-zero](https://github.com/elie222/inbox-zero) ![stars](https://img.shields.io/github/stars/elie222/inbox-zero?style=flat-square&label=%E2%98%85) - Email productivity: open-source AI email assistant that uses TypeSafe Jev System One decision models to classify incoming email intent and triage action items.
 
 ### Adaptive & Realtime UI
 
