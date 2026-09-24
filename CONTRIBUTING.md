@@ -196,7 +196,7 @@ Vocabulary, generated from [`tags.json`](tags.json) — add a value there, and r
 <!-- Generated from tags.json by scripts/build-readme.py. Edit tags.json, not this table. -->
 | Key | Values |
 | --- | --- |
-| `agent` | `multi`, `claude-code`, `pi`, `codex`, `cursor`, `cline` |
+| `agent` | `multi`, `claude-code`, `pi`, `codex`, `cursor`, `cline`, `dsh` |
 | `type` | `api`, `cli`, `proxy`, `plugin`, `library`, `hosted`, `self-hosted`, `extension` |
 <!-- tags:end -->
 
