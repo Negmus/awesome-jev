@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 41 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 34 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 33 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 34 entries
 - [Agent Decisions](categories/agent-decisions.md) — 50 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 30 entries
@@ -246,6 +246,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [OpenViking](https://github.com/volcengine/OpenViking) ![stars](https://img.shields.io/github/stars/volcengine/OpenViking?style=flat-square&label=%E2%98%85) - Reranking: Volcengine's agent context database ships a Jev rerank client that scores each candidate document with `jev-latest` against `api.typesafe.ai` and treats the returned probability as relevance, because TypeSafe exposes no native rerank endpoint.
 - [jevsearch](https://github.com/kylemclaren/jevsearch) ![stars](https://img.shields.io/github/stars/kylemclaren/jevsearch?style=flat-square&label=%E2%98%85) - Site search: shadcn/ui command-palette block that streams keyword hits on the first keystroke, then sends the top 20 to Jev in one request (a `Noul` per page on whether the visitor would be glad to land there, a `Choice` for the single best answer, and a `Noul` on whether any page answers at all) and re-orders or drops hits in code, with the repo's own benchmark over the 109-page TypeSafe docs reporting Hit@1 of 83% against 41% for its keyword pass alone.
 - [jev-retrieval](https://github.com/romeromarcelo/jev-retrieval) ![agent: Claude Code](https://img.shields.io/badge/agent-Claude%20Code-C1512C?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/romeromarcelo/jev-retrieval?style=flat-square&label=%E2%98%85) - Coding agents: Rust CLI (`jevr`) that turns a natural-language query into grep-style `path:start-end` targets — a stateless local BM25 pass proposes candidates, Jev `Noul` membership questions score their 100/20-line windows (kept at 0.90 for code, 0.60 for docs), and one listwise `Choice` per lane orders the keepers — ships as a Claude Code skill and plugin, and placed 2nd of 90 models on the HAKARI-Bench NanoRTEB reranking leaderboard.
+- [Vector Graph RAG](https://github.com/zilliztech/vector-graph-rag) ![stars](https://img.shields.io/github/stars/zilliztech/vector-graph-rag?style=flat-square&label=%E2%98%85) - Multi-hop retrieval: uses Jev Noul judgments to score candidate relations and applies a configurable threshold before retrieving their linked documents.
 
 ### Agent Decisions
 
