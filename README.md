@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 32 entries
 - [Agent Decisions](categories/agent-decisions.md) — 49 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 27 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 28 entries
 - [Calibration & Research](categories/calibration-research.md) — 28 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 74 entries
 - [Game & Simulation](categories/game-simulation.md) — 19 entries
@@ -338,6 +338,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [Jev Does Not Play Dice](https://kantahayashiai.github.io/posts/jev-does-not-play-dice/) - Model evaluation: asks Jev a `Choice` over the six faces of a hidden fair die 400 times; Jev selects face 1 on all 400 trials with 82.9% mean reported probability and 19.0% accuracy, then tests whether stated probabilities survive in synthetic forecast documents, where a 30% shortage risk comes back as 5.3% via Choice and 26.7% via Noul; raw responses and analysis code on [GitHub](https://github.com/KantaHayashiAI/jev-does-not-play-dice).
 - [DecisionBench](https://github.com/Hanno-Labs/decision-bench) - Model evaluation: scores Jev Noul, Choice, and Score answers on pinned document-grounded tasks, counting malformed probability distributions as misses so model comparisons remain reproducible.
 - [jev-regress-bench](https://github.com/redhatpanda/jev-regress-bench) - Agent regression testing: after a config edit, one `Choice` (same / fact_differs / action_differs / specificity_differs) decides which of an agent's approved answers changed meaning rather than wording, and on 109 before/after pairs whose ground truth is derived from what each config rule does to the answer, Jev catches all 19 real changes with 13 false alarms against 33 for a markers-then-embeddings-then-LLM stack and 19 for the LLM judge alone.
+- [jev-fanout-bench](https://github.com/blowxian/jev-fanout-bench) - Model billing: compares batched with one-question-per-call requests across 2,976 calls to `jev-1.13-20260917` through OpenRouter's TypeSafe-compatible `/systemone` endpoint, reporting about 261 fixed input tokens per request, zero spread in the implied per-request cost across question counts, batched-vs-single answer differences comparable to repeat-request noise, and median input-token savings of 76–86% at eight questions.
 
 ### Calibration & Research
 
