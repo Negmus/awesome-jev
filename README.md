@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 35 entries
 - [Agent Decisions](categories/agent-decisions.md) — 52 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 31 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 32 entries
 - [Calibration & Research](categories/calibration-research.md) — 32 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 81 entries
 - [Game & Simulation](categories/game-simulation.md) — 24 entries
@@ -356,6 +356,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [SystemOneHarness](https://github.com/HarnessRouter/SystemOneHarness) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/HarnessRouter/SystemOneHarness?style=flat-square&label=%E2%98%85) - Model evaluation: execution harness and dual-loop test framework that compiles goals, browser environments, and MCP servers into bounded System One reflexes, evaluating Jev against deterministic baselines.
 - [judgekit](https://github.com/lexingtonhibiki/judgekit) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/lexingtonhibiki/judgekit?style=flat-square&label=%E2%98%85) - Model evaluation: runs declarative YAML judgment tasks natively on Jev `Choice`/`Score`/`Noul` or any OpenAI-compatible backend (with a free rules fallback), gates low confidence at 0.7 (caught 3/3 misjudgments at 9% escalation, n=130), and publishes Chinese-scenario cost-accuracy numbers — 97.7% @ ¥0.105/1k decisions and 60.0% → 68.3% on a frozen 120-item human-labeled spam set at τ=0.10.
 - [Convex Decision Evals](https://www.convex.dev/evals/decision) - Model evaluation: asks Jev a `Choice` on 108 verified four-option questions about the Convex backend platform (no docs or tools in the prompt, each asked 3 times with shuffled options, random guessing 25%) alongside 14 LLMs, where jev-1.13 scores 84.6% at a 199 ms median and $0.0088 per full run against 98.0% at 2.12 s and $1.59 for the top model, with every answer, probability and raw request/response in a public [explorer](https://convex-evals.netlify.app) and the runner in [get-convex/convex-evals](https://github.com/get-convex/convex-evals).
+- [jev-medhallu-benchmark](https://github.com/stperic/jev-medhallu-benchmark) ![stars](https://img.shields.io/github/stars/stperic/jev-medhallu-benchmark?style=flat-square&label=%E2%98%85) - Medical AI: pre-registered test of Jev as a hallucination check on Stanford MedHELM's MedHallu (1,000 test items), asking one `Noul` on whether an answer misrepresents its PubMed abstract; Jev scored 92.9% against 92.4–95.1% for four fast LLMs at a 204 ms median and USD 0.03 per 1,000 checks, and letting Jev settle the 37% of items where it was at least 90% sure kept each LLM's accuracy with 37% fewer LLM calls.
 
 ### Calibration & Research
 
