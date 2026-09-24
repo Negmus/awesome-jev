@@ -61,15 +61,15 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 40 entries
+- [Classification & Routing](categories/classification-routing.md) — 41 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 33 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 34 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 33 entries
-- [Agent Decisions](categories/agent-decisions.md) — 49 entries
+- [Agent Decisions](categories/agent-decisions.md) — 50 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 29 entries
 - [Calibration & Research](categories/calibration-research.md) — 29 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 76 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 77 entries
 - [Game & Simulation](categories/game-simulation.md) — 21 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -155,6 +155,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [jev-rental](https://github.com/klauswg/jev-suite/tree/master/jev-rental) ![stars](https://img.shields.io/github/stars/klauswg/jev-suite?style=flat-square&label=%E2%98%85) - Consumer rental: sorts every claim in a rental listing into verify-on-site / demand-evidence / high-risk-pitch buckets to build a pre-viewing checklist with code-templated questions; 50-sample calibration reports 0.910 gated accuracy and 0/10 injection flips.
 - [jev-resume-disqualifier](https://github.com/AiPersonacademy/jev-resume-disqualifier) ![stars](https://img.shields.io/github/stars/AiPersonacademy/jev-resume-disqualifier?style=flat-square&label=%E2%98%85) - Recruiting: knocks a resume out of a pipeline in under 25 ms by asking Jev the disqualifying question first, so only survivors reach a full evaluation.
 - [Jev-IOT](https://github.com/pjmenon45/Jev-IOT) ![stars](https://img.shields.io/github/stars/pjmenon45/Jev-IOT?style=flat-square&label=%E2%98%85) - Smart Utilities & Telecommunications: Ultra-low-cost, non-autoregressive AI telemetry classifier enabling sub-150ms anomaly triage and autonomic remediation across 10M+ smart meters for under $35/month.
+- [AgentScope](https://github.com/agentscope-ai/agentscope) ![stars](https://img.shields.io/github/stars/agentscope-ai/agentscope?style=flat-square&label=%E2%98%85) - Multi-agent platforms: multi-agent platform by Alibaba implementing native TypeSafe Jev classification models for binary, choice, and score routing across agent pipelines.
 
 ### Adaptive & Realtime UI
 
@@ -206,6 +207,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [approval-judge-bridge](https://github.com/oppih/approval-judge-bridge) ![type: proxy](https://img.shields.io/badge/type-proxy-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/oppih/approval-judge-bridge?style=flat-square&label=%E2%98%85) - Agent safety: OpenAI-compatible /v1/chat/completions proxy that gates an agent's shell commands through a calibrated Jev Choice decision with fail-closed semantics.
 - [Dub](https://github.com/dubinc/dub) ![stars](https://img.shields.io/github/stars/dubinc/dub?style=flat-square&label=%E2%98%85) - Link safety: calls `typesafe-ai/jev` in `malicious-link-check.ts` before a short link is created, so the URL is gated by a typed verdict rather than a blocklist.
 - [Canny](https://github.com/qkal/Canny) ![agent: Multi](https://img.shields.io/badge/agent-Multi-1F6FEB?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/qkal/Canny?style=flat-square&label=%E2%98%85) - Agent verification: stops AI coding agents from claiming work is done without evidence by using deterministic hooks and TypeSafe's Jev advisor to evaluate test results, file diffs, and verification logs.
+- [JevGate](https://github.com/Tech-Byte-Frontier/jevgate) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/Tech-Byte-Frontier/jevgate?style=flat-square&label=%E2%98%85) - Code review: CI and coding-agent gate that parses code locally and asks Jev `Noul`, `Choice` and `Score` questions about one function, file outline, candidate copy pair or test at a time, turns answers at 0.80 into `review` or `consider` findings with file and line, fails the build on `review`, and keeps undecided files as `uncertain` instead of clearing them.
 
 ### Scoring & Ranking
 
@@ -298,6 +300,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [mobile-jev](https://github.com/droidrun/mobile-jev) ![stars](https://img.shields.io/github/stars/droidrun/mobile-jev?style=flat-square&label=%E2%98%85) - Mobile agents: puts Jev into on-device screen-aware action selection for the Droidrun loop, with a Jev Studio web app streaming live device and decision telemetry.
 - [Jev-cu](https://github.com/Sac-Y/Jev-cu) ![stars](https://img.shields.io/github/stars/Sac-Y/Jev-cu?style=flat-square&label=%E2%98%85) - Computer use: drives a GUI through Jev decisions with a `jev-decide` script and ships a P0 case set taken from accessibility-tree snapshots of a calculator, a calendar, and the NetEase home screen.
 - [SkillRanker](https://github.com/Dicklesworthstone/skillranker) ![agent: Claude Code](https://img.shields.io/badge/agent-Claude%20Code-C1512C?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/Dicklesworthstone/skillranker?style=flat-square&label=%E2%98%85) - Coding agents: standalone Rust CLI that uses Jev to rank candidate skills against live session context, advising the next step through a Claude Code UserPromptSubmit hook.
+- [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) ![stars](https://img.shields.io/github/stars/Significant-Gravitas/AutoGPT?style=flat-square&label=%E2%98%85) - Autonomous agents: open-source autonomous agent platform featuring first-class TypeSafe Jev decision blocks for typed routing, filtering, scoring, and confidence-gated next-action dispatching.
 
 ### Data Labeling & Curation
 
@@ -459,6 +462,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [typesafeai-dotnet-sdk](https://github.com/saibimajdi/typesafeai-dotnet-sdk) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/saibimajdi/typesafeai-dotnet-sdk?style=flat-square&label=%E2%98%85) - .NET ecosystem: community .NET SDK for the TypeSafe AI System One API with strongly-typed Noul, Choice, and Score questions and structured answers.
 - [jevcompat](https://github.com/mandu5/jevcompat) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/mandu5/jevcompat?style=flat-square&label=%E2%98%85) - Interoperability: a 48-requirement spec of the `POST /v1/systemone` wire contract, each rule citing TypeSafe's docs, OpenAPI file or SDKs, and a suite that checks any Jev-compatible server against it (`Choice` probabilities keyed by option and summing to 1, `Score` equal to Σ i·p, 2–255 options, error shapes, answers that stay put when question ids or order change), finding 2 of the 8 most-starred open ports conformant, with a reference mock that breaks each rule on purpose and a proxy that fixes what can be fixed.
 - [typesafe-ai (Rust)](https://github.com/Twister915/typesafe-ai) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/Twister915/typesafe-ai?style=flat-square&label=%E2%98%85) - Rust ecosystem: typed TypeSafe AI client with async (reqwest) and blocking (ureq) backends, deserializing Noul, Choice, and Score responses into Rust enums with observable retry streams.
+- [Pydantic AI](https://github.com/pydantic/pydantic-ai) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/pydantic/pydantic-ai?style=flat-square&label=%E2%98%85) - Python ecosystem: official Pydantic AI agent framework shipping first-class `TypeSafeModel` integration to map Pydantic schema fields into typed Jev System One questions with confidence scoring.
 
 ### Game & Simulation
 
