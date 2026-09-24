@@ -62,19 +62,19 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 ## Current coverage
 
 - [Classification & Routing](categories/classification-routing.md) — 41 entries
-- [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
+- [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 9 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 34 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 35 entries
 - [Agent Decisions](categories/agent-decisions.md) — 50 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 31 entries
-- [Calibration & Research](categories/calibration-research.md) — 30 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 78 entries
-- [Game & Simulation](categories/game-simulation.md) — 22 entries
+- [Calibration & Research](categories/calibration-research.md) — 31 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 79 entries
+- [Game & Simulation](categories/game-simulation.md) — 23 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 2 entries
 - [Content Moderation](categories/content-moderation.md) — 8 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 79 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 86 entries
 
 ### Open categories still being seeded
 
@@ -169,6 +169,7 @@ Source file: [`categories/adaptive-realtime-ui.md`](categories/adaptive-realtime
 - [jev-canvas](https://github.com/gaborishka/jev-canvas) ![stars](https://img.shields.io/github/stars/gaborishka/jev-canvas?style=flat-square&label=%E2%98%85) - Multimodal UI: draw on a tldraw canvas by voice while pointing a webcam-tracked finger; on every partial transcript Jev answers eight typed questions (is it a command, is the sentence complete, action, shape, colour, target, place, size) and plain code gates them with thresholds, in English and Ukrainian, 300–550 ms per decision.
 - [DWIM](https://github.com/rohit9mehta/dwim) ![stars](https://img.shields.io/github/stars/rohit9mehta/dwim?style=flat-square&label=%E2%98%85) - Desktop productivity: a macOS command palette that reads the frontmost app's menu tree through the accessibility API, asks Jev one `Noul` per menu item against the user's plain-language request, and presses the top match when it clears a probability threshold, falling back to a ranked list otherwise and never auto-running destructive items.
 - [SemanticSpace](https://semanticspace.dev/) - Semantic mapping: places phrases in 2D by asking Jev how strongly each one relates to two chosen axis concepts and using those scores as coordinates.
+- [shapeshift](https://github.com/anishfn/shapeshift) ![stars](https://img.shields.io/github/stars/anishfn/shapeshift?style=flat-square&label=%E2%98%85) - Input: one text box that morphs into the right UI as you type, asking Jev which control the sentence calls for, and running offline.
 
 ### Verification & Guardrails
 
@@ -386,6 +387,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [SemIf](https://github.com/TheoLeeCJ/SemIf-OpenJev) ![stars](https://img.shields.io/github/stars/TheoLeeCJ/SemIf-OpenJev?style=flat-square&label=%E2%98%85) - Independent replication: reproduces Jev's typed-decision interface on open models, including an MLX backend on Apple silicon, and measures that typed decisions arrive together while a JSON answer streams token by token.
 - [jev-verify](https://github.com/stillmarcus24/jev-verify) ![stars](https://img.shields.io/github/stars/stillmarcus24/jev-verify?style=flat-square&label=%E2%98%85) - Developer tooling: recomputes Jev's confidence and expected-score identities against outputs published in public repositories rather than live API calls, separating vendor-channel examples (10/10) and recorded responses (843/854) from hand-authored fixtures (115/296), where all 121 outputs whose confidence equals the fractional part of their score are concentrated.
 - [AnyJev](https://github.com/nokia-applied-research/AnyJev) ![stars](https://img.shields.io/github/stars/nokia-applied-research/AnyJev?style=flat-square&label=%E2%98%85) - Open research: turns open LLMs into Jev-style decision models that read typed decisions and calibrated probabilities from next-token prefill distributions with zero fine-tuning, reducing order-flip rate and calibration error.
+- [JevK5](https://github.com/allebee/jevk5) ![stars](https://img.shields.io/github/stars/allebee/jevk5?style=flat-square&label=%E2%98%85) - Open alternative: an open-weight model answering yes/no, choice and score questions with a probability per option in one forward pass, reporting about 13 ms on an H100 and 33.1% against Jev's 36.7% on 308 sealed decisions.
 
 ### Infra / SDKs / Integrations
 
@@ -469,6 +471,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [typesafe-ai (Rust)](https://github.com/Twister915/typesafe-ai) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/Twister915/typesafe-ai?style=flat-square&label=%E2%98%85) - Rust ecosystem: typed TypeSafe AI client with async (reqwest) and blocking (ureq) backends, deserializing Noul, Choice, and Score responses into Rust enums with observable retry streams.
 - [Pydantic AI](https://github.com/pydantic/pydantic-ai) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/pydantic/pydantic-ai?style=flat-square&label=%E2%98%85) - Python ecosystem: official Pydantic AI agent framework shipping first-class `TypeSafeModel` integration to map Pydantic schema fields into typed Jev System One questions with confidence scoring.
 - [Milvus Model](https://github.com/milvus-io/milvus-model) ![stars](https://img.shields.io/github/stars/milvus-io/milvus-model?style=flat-square&label=%E2%98%85) - Search infrastructure: batches candidate-document Noul questions through Jev and returns score-sorted results with original indices through a Python reranker adapter.
+- [djev-run](https://github.com/taeold/djev-run) ![stars](https://img.shields.io/github/stars/taeold/djev-run?style=flat-square&label=%E2%98%85) - Serving: deploys DiffusionGemma-Jev behind a TypeSafe-compatible API on a Cloud Run GPU with snake, dino and tetris demos wired to the decision endpoint.
 
 ### Game & Simulation
 
@@ -496,6 +499,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [THE HUNDRED EYES](https://github.com/mintannn/THE-HUNDRED-EYES) ![stars](https://img.shields.io/github/stars/mintannn/THE-HUNDRED-EYES?style=flat-square&label=%E2%98%85) - Interactive media art: asks Jev one `Choice` and four `Score` questions per fictional observer to animate 100 eyes from a shared post, revealing four amplified voices before equal-count analytics expose the full distribution of reactions.
 - [jev-pilot-reflex](https://github.com/manhua-man/jev-pilot-reflex) ![stars](https://img.shields.io/github/stars/manhua-man/jev-pilot-reflex?style=flat-square&label=%E2%98%85) - Autonomous vehicle simulation: Three.js autonomous driving reflex and AI safety brake simulator using Jev System 1/2 dual-brain architecture for fast emergency intervention.
 - [Magic Jev Ball](https://github.com/mikecann/magic-jev-ball) ![stars](https://img.shields.io/github/stars/mikecann/magic-jev-ball?style=flat-square&label=%E2%98%85) - Gaming: a 3D Magic 8 Ball you hold, shake and let go, where one Convex action asks Jev a `Choice` over the 20 classic answers for the user's question and the page shows Jev's probability for every answer, displaying the highest-probability one because the rounded probabilities occasionally disagree with the reported choice.
+- [Jev-mice](https://mice.jev.carsonsweet.com/) - Simulation: a mouse colony whose behaviour runs through Jev decisions on top of a deterministic engine.
 
 ### Finance & Trading
 
@@ -611,6 +615,13 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Jev in practice: typed decisions, scoped authority](https://tenuo.ai/blog/jev-scoped-authority) - Blog: pairs the typed-decision loop with scoped authority, so a confidence value only authorises the action its scope already allows.
 - [jevchat](https://github.com/kyle-pena-nlp/jevchat) ![stars](https://img.shields.io/github/stars/kyle-pena-nlp/jevchat?style=flat-square&label=%E2%98%85) - Repo + HN thread (173 points, 49 comments): deliberately misuses Jev as a generator to locate where the typed-decision model stops being useful.
 - [Open-sourced jev architecture last year](https://news.ycombinator.com/item?id=49736660) - HN thread (96 points, 11 comments): a prior-work claim for the same architecture, where the discussion turns on recognition and marketing rather than on the technical overlap.
+- [Jev isn't new tech](https://www.reddit.com/r/LocalLLaMA/comments/1woe70t/jev_isnt_new_tech_its_marketing_targets_people/) - Reddit (694 upvotes, 265 comments): the largest critique thread, arguing the marketing addresses people who think AI began with chat models.
+- [Jev deserves hype but not the type it's getting](https://news.ycombinator.com/item?id=49824365) - Hacker News: separates the technical claim from the launch framing, and argues the former stands without the latter.
+- [Jev Can't Be Calibrated](https://www.alexmolas.com/2026/09/23/jev-cant-be-calibrated.html) - Blog + HN thread (59 points, 60 comments): a statistical argument that the calibration claim cannot hold, with the methods written out.
+- [gev beats jev and takes images as input too](https://anyeval.com/eval/jevbench/versus?a=typesafe-ai%2Fjev&b=trustedrouter%2Fgev-1.0) - Benchmark: a head-to-head eval page where a rival model outperforms Jev on the same question set and additionally accepts images.
+- [I benchmarked TypeSafe's JEV against LLMs, BERT and Laya](https://www.reddit.com/r/AI_India/comments/1wmvyqz/i_benchmarked_typesafes_jev_against_llms_bert_and/) - Reddit (49 upvotes): pits Jev against both generative models and a classical classifier on the same task.
+- [The Jev archive built by OpenChamber](https://x.com/OpenChamberAI/status/2102423502414618729) - X: an independent site that has crawled X every four hours and collected 5,380+ Jev posts into a classified, multilingual index.
+- [zsh history completion with Jev](https://x.com/DIYgod/status/2101886889150292085) - X: picks the most likely next command from the last 100 deduplicated history entries by asking Jev, and shows it greyed out after the prompt.
 
 ## Submission format
 
