@@ -70,7 +70,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 30 entries
 - [Calibration & Research](categories/calibration-research.md) — 30 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 78 entries
-- [Game & Simulation](categories/game-simulation.md) — 21 entries
+- [Game & Simulation](categories/game-simulation.md) — 22 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 2 entries
 - [Content Moderation](categories/content-moderation.md) — 8 entries
@@ -493,6 +493,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [JEV-Star](https://github.com/sc2musa/Jev_Star) ![stars](https://img.shields.io/github/stars/sc2musa/Jev_Star?style=flat-square&label=%E2%98%85) - Gaming: uses Jev `Choice` decisions for StarCraft II macro control and micromanagement on 35 SMAC-Hard maps, validates selections against available actions, and follows optional GPT-6 plans to separate frequent action selection from longer-term strategy.
 - [THE HUNDRED EYES](https://github.com/mintannn/THE-HUNDRED-EYES) ![stars](https://img.shields.io/github/stars/mintannn/THE-HUNDRED-EYES?style=flat-square&label=%E2%98%85) - Interactive media art: asks Jev one `Choice` and four `Score` questions per fictional observer to animate 100 eyes from a shared post, revealing four amplified voices before equal-count analytics expose the full distribution of reactions.
 - [jev-pilot-reflex](https://github.com/manhua-man/jev-pilot-reflex) ![stars](https://img.shields.io/github/stars/manhua-man/jev-pilot-reflex?style=flat-square&label=%E2%98%85) - Autonomous vehicle simulation: Three.js autonomous driving reflex and AI safety brake simulator using Jev System 1/2 dual-brain architecture for fast emergency intervention.
+- [Magic Jev Ball](https://github.com/mikecann/magic-jev-ball) ![stars](https://img.shields.io/github/stars/mikecann/magic-jev-ball?style=flat-square&label=%E2%98%85) - Gaming: a 3D Magic 8 Ball you hold, shake and let go, where one Convex action asks Jev a `Choice` over the 20 classic answers for the user's question and the page shows Jev's probability for every answer, displaying the highest-probability one because the rounded probabilities occasionally disagree with the reported choice.
 
 ### Finance & Trading
 
