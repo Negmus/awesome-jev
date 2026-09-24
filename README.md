@@ -63,7 +63,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 42 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 9 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 34 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 35 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 35 entries
 - [Agent Decisions](categories/agent-decisions.md) — 52 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
@@ -107,8 +107,8 @@ Optional tags on an entry name the coding agent it targets and the kind of integ
 - **Pi** (12) — [pi-jev-router](https://github.com/mejiasd3v/pi-jev-router) · [pi-jev-skill-picker](https://github.com/safzanpirani/pi-jev-skill-picker) · [pi-jev](https://github.com/y0usaf/pi-jev) · [pi-heed](https://github.com/Nyarlathoteppppp/pi-heed) · [pi-verdict](https://github.com/jesset/pi-verdict) · [Reflex](https://github.com/kaustav1996/reflex) · [pi-typesafe-jev](https://github.com/legacybridge-tech/pi-typesafe-jev) · [pi-jev (TheoOliveira)](https://github.com/TheoOliveira/pi-jev) · [pi-quiet-ask](https://github.com/HyunjunJeon/pi-quiet-ask) · [pi-fast-jev-compaction](https://github.com/joelhooks/pi-fast-jev-compaction) · [pi-typesafe-router](https://github.com/jekozyra/pi-typesafe-router) · [Testing Jev for Pi extensions (r/PiCodingAgent)](https://reddit.com/r/PiCodingAgent/comments/1whsav6/anyone_else_testing_out_typesafe_ais_new_system/)
 - **Claude Code** (7) — [jev-skill-router](https://github.com/shimo4228/jev-skill-router) · [Sniff Test](https://github.com/DanRWilloughby/snifftest) · [jev-retrieval](https://github.com/romeromarcelo/jev-retrieval) · [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) · [jev-belay](https://github.com/valentynkit/jev-belay) · [jev-pruner](https://github.com/tamaratran/jev-pruner) · [SkillRanker](https://github.com/Dicklesworthstone/skillranker)
 - **Codex** (6) — [Codex Jev Router](https://github.com/suenot/codex-jev-router) · [Jev Auto Router](https://github.com/miniLV/Jev-Auto-Router) · [Foreman](https://github.com/thruwire/foreman) · [fast-dev-compaction](https://github.com/leonaaardob/fast-dev-compaction) · [jev-desktop](https://github.com/yikangy873-gif/jev-desktop) · [jev-browser-use](https://github.com/wy-coliney/jev-browser-use)
+- **DeepSeek Harness** (2) — [dsh-jev-interceptor](https://github.com/AskTheWay/dsh-jev-interceptor) · [dsh-auto-mode](https://git.allen-software.com/allenh1/dsh-auto-mode)
 - **Cline** (1) — [Cline plugins](https://github.com/cline/plugins)
-- **DeepSeek Harness** (1) — [dsh-auto-mode](https://git.allen-software.com/allenh1/dsh-auto-mode)
 
 ## Full list
 
@@ -211,6 +211,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [Dub](https://github.com/dubinc/dub) ![stars](https://img.shields.io/github/stars/dubinc/dub?style=flat-square&label=%E2%98%85) - Link safety: calls `typesafe-ai/jev` in `malicious-link-check.ts` before a short link is created, so the URL is gated by a typed verdict rather than a blocklist.
 - [Canny](https://github.com/qkal/Canny) ![agent: Multi](https://img.shields.io/badge/agent-Multi-1F6FEB?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/qkal/Canny?style=flat-square&label=%E2%98%85) - Agent verification: stops AI coding agents from claiming work is done without evidence by using deterministic hooks and TypeSafe's Jev advisor to evaluate test results, file diffs, and verification logs.
 - [JevGate](https://github.com/Tech-Byte-Frontier/jevgate) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/Tech-Byte-Frontier/jevgate?style=flat-square&label=%E2%98%85) - Code review: CI and coding-agent gate that parses code locally and asks Jev `Noul`, `Choice` and `Score` questions about one function, file outline, candidate copy pair or test at a time, turns answers at 0.80 into `review` or `consider` findings with file and line, fails the build on `review`, and keeps undecided files as `uncertain` instead of clearing them.
+- [dsh-jev-interceptor](https://github.com/AskTheWay/dsh-jev-interceptor) ![agent: DeepSeek Harness](https://img.shields.io/badge/agent-DeepSeek%20Harness-2D5BD7?style=flat-square) ![type: plugin](https://img.shields.io/badge/type-plugin-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/AskTheWay/dsh-jev-interceptor?style=flat-square&label=%E2%98%85) - Coding agents: DeepSeek Harness plugin where a Jev `Choice` risk class plus `Noul` irreversibility, task-match, and injection checks gate every non-read-only tool call (deny confident high-risk, ask ambiguous, delegate the rest), `Noul` scope and reversibility questions auto-approve clearly-granted calls behind argument-evidence gating, and a per-message `Score` re-ranks what a referenced session keeps instead of oldest-first dropping — fail-closed to stock behavior, shadow mode with a `/jev-stats` command, 64 tests.
 
 ### Scoring & Ranking
 
