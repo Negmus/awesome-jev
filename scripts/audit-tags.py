@@ -75,10 +75,28 @@ def audit(root: pathlib.Path) -> tuple[list, list]:
     return unsupported, unnoticed
 
 
+
+def check_no_rendered_badges(paths) -> int:
+    """分类文件必须用源码标签 `{agent: x}`，不能写渲染后的 badge。
+
+    渲染形式会让 ENTRY_RE 匹配失败：该条拿不到星数 badge，也不会进入
+    「Find by coding agent」索引 —— 从 README 上看不出来，因为 markdown 照样
+    渲染那张图片（2026-09-24 在 infra-sdks-integrations.md 找到 6 行这样的残骸）。
+    """
+    bad = 0
+    for p in paths:
+        for i, line in enumerate(open(p, encoding="utf-8"), 1):
+            if line.startswith("- [") and "img.shields.io" in line:
+                print(f"error: {p}:{i} 条目里写了渲染后的 badge，应改为 `{{agent: ...}}` / `{{type: ...}}`")
+                bad += 1
+    return bad
+
 def main(argv: list[str]) -> int:
     root = pathlib.Path(argv[1] if len(argv) > 1 else "categories")
     if not root.is_dir():
         raise SystemExit(f"{root}: not a directory")
+
+    rendered = check_no_rendered_badges(sorted(root.glob("*.md")))
 
     unsupported, unnoticed = audit(root)
 
@@ -88,8 +106,11 @@ def main(argv: list[str]) -> int:
     for name, agent, filename in unsupported:
         print(f"error: {name} ({filename}) is tagged {agent}, which its text does not mention")
 
-    if unsupported:
-        print(f"\n{len(unsupported)} tag(s) unsupported by the entry text.")
+    if unsupported or rendered:
+        if unsupported:
+            print(f"\n{len(unsupported)} tag(s) unsupported by the entry text.")
+        if rendered:
+            print(f"{rendered} entry/badge line(s) rendered instead of tagged.")
         return 1
 
     print(f"tags check out ({len(unnoticed)} notice(s)).")
