@@ -68,7 +68,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Agent Decisions](categories/agent-decisions.md) — 50 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 29 entries
-- [Calibration & Research](categories/calibration-research.md) — 29 entries
+- [Calibration & Research](categories/calibration-research.md) — 30 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 77 entries
 - [Game & Simulation](categories/game-simulation.md) — 21 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
@@ -380,6 +380,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [Jev calculator](https://github.com/pc418/jev-calculator) ![type: hosted](https://img.shields.io/badge/type-hosted-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/pc418/jev-calculator?style=flat-square&label=%E2%98%85) - Model exploration: a calculator with no arithmetic in it, asking Jev one `Choice` over 13 options (`0`–`9`, `.`, `-`, `END`) per answer character given the expression and the digits so far, appending whatever it picks and showing each step's full probability distribution and confidence, with a Rerun that exposes call-to-call jitter on identical inputs, live on Cloudflare Workers.
 - [SemIf](https://github.com/TheoLeeCJ/SemIf-OpenJev) ![stars](https://img.shields.io/github/stars/TheoLeeCJ/SemIf-OpenJev?style=flat-square&label=%E2%98%85) - Independent replication: reproduces Jev's typed-decision interface on open models, including an MLX backend on Apple silicon, and measures that typed decisions arrive together while a JSON answer streams token by token.
 - [jev-verify](https://github.com/stillmarcus24/jev-verify) ![stars](https://img.shields.io/github/stars/stillmarcus24/jev-verify?style=flat-square&label=%E2%98%85) - Developer tooling: recomputes Jev's confidence and expected-score identities against outputs published in public repositories rather than live API calls, separating vendor-channel examples (10/10) and recorded responses (843/854) from hand-authored fixtures (115/296), where all 121 outputs whose confidence equals the fractional part of their score are concentrated.
+- [AnyJev](https://github.com/nokia-applied-research/AnyJev) ![stars](https://img.shields.io/github/stars/nokia-applied-research/AnyJev?style=flat-square&label=%E2%98%85) - Open research: turns open LLMs into Jev-style decision models that read typed decisions and calibrated probabilities from next-token prefill distributions with zero fine-tuning, reducing order-flip rate and calibration error.
 
 ### Infra / SDKs / Integrations
 
