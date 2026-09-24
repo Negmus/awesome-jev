@@ -63,7 +63,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 41 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 33 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 34 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 32 entries
 - [Agent Decisions](categories/agent-decisions.md) — 50 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
@@ -207,6 +207,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [approval-judge-bridge](https://github.com/oppih/approval-judge-bridge) ![type: proxy](https://img.shields.io/badge/type-proxy-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/oppih/approval-judge-bridge?style=flat-square&label=%E2%98%85) - Agent safety: OpenAI-compatible /v1/chat/completions proxy that gates an agent's shell commands through a calibrated Jev Choice decision with fail-closed semantics.
 - [Dub](https://github.com/dubinc/dub) ![stars](https://img.shields.io/github/stars/dubinc/dub?style=flat-square&label=%E2%98%85) - Link safety: calls `typesafe-ai/jev` in `malicious-link-check.ts` before a short link is created, so the URL is gated by a typed verdict rather than a blocklist.
 - [Canny](https://github.com/qkal/Canny) ![agent: Multi](https://img.shields.io/badge/agent-Multi-1F6FEB?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/qkal/Canny?style=flat-square&label=%E2%98%85) - Agent verification: stops AI coding agents from claiming work is done without evidence by using deterministic hooks and TypeSafe's Jev advisor to evaluate test results, file diffs, and verification logs.
+- [JevGate](https://github.com/Tech-Byte-Frontier/jevgate) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/Tech-Byte-Frontier/jevgate?style=flat-square&label=%E2%98%85) - Code review: CI and coding-agent gate that parses code locally and asks Jev `Noul`, `Choice` and `Score` questions about one function, file outline, candidate copy pair or test at a time, turns answers at 0.80 into `review` or `consider` findings with file and line, fails the build on `review`, and keeps undecided files as `uncertain` instead of clearing them.
 
 ### Scoring & Ranking
 
