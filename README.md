@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 32 entries
 - [Calibration & Research](categories/calibration-research.md) — 32 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 81 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 82 entries
 - [Game & Simulation](categories/game-simulation.md) — 24 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 2 entries
@@ -481,6 +481,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [djev-run](https://github.com/taeold/djev-run) ![stars](https://img.shields.io/github/stars/taeold/djev-run?style=flat-square&label=%E2%98%85) - Serving: deploys DiffusionGemma-Jev behind a TypeSafe-compatible API on a Cloud Run GPU with snake, dino and tetris demos wired to the decision endpoint.
 - [GPTCache](https://github.com/zilliztech/GPTCache) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/zilliztech/GPTCache?style=flat-square&label=%E2%98%85) - Semantic caching: Zilliz semantic cache integrates TypeSafe Jev Noul checks to evaluate cache hit freshness and time-dependent query validity.
 - [jev-symfony-bundle](https://github.com/vbcherepanov/jev-symfony-bundle) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/vbcherepanov/jev-symfony-bundle?style=flat-square&label=%E2%98%85) - PHP / Symfony: Symfony bundle providing typed Jev clients, validation constraints (`#[JevNoul]`, `#[JevChoice]`), Workflow guards, and WebProfiler panels.
+- [JevT++](https://github.com/wiatrM/jevtpp) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/wiatrM/jevtpp?style=flat-square&label=%E2%98%85) - C++ integration: independent C++20 library with compile-time enum schemas, typed Choice/Noul/Score results and abstention, local Laya inference through ONNX Runtime or ggml, and an opt-in TypeSafe System One HTTP backend tested with mocks and loopback HTTP rather than live-provider calls.
 
 ### Game & Simulation
 
