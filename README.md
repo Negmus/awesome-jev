@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 31 entries
 - [Calibration & Research](categories/calibration-research.md) — 31 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 79 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 80 entries
 - [Game & Simulation](categories/game-simulation.md) — 23 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 2 entries
@@ -474,6 +474,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [Pydantic AI](https://github.com/pydantic/pydantic-ai) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/pydantic/pydantic-ai?style=flat-square&label=%E2%98%85) - Python ecosystem: official Pydantic AI agent framework shipping first-class `TypeSafeModel` integration to map Pydantic schema fields into typed Jev System One questions with confidence scoring.
 - [Milvus Model](https://github.com/milvus-io/milvus-model) ![stars](https://img.shields.io/github/stars/milvus-io/milvus-model?style=flat-square&label=%E2%98%85) - Search infrastructure: batches candidate-document Noul questions through Jev and returns score-sorted results with original indices through a Python reranker adapter.
 - [djev-run](https://github.com/taeold/djev-run) ![stars](https://img.shields.io/github/stars/taeold/djev-run?style=flat-square&label=%E2%98%85) - Serving: deploys DiffusionGemma-Jev behind a TypeSafe-compatible API on a Cloud Run GPU with snake, dino and tetris demos wired to the decision endpoint.
+- [GPTCache](https://github.com/zilliztech/GPTCache) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/zilliztech/GPTCache?style=flat-square&label=%E2%98%85) - Semantic caching: Zilliz semantic cache integrates TypeSafe Jev Noul checks to evaluate cache hit freshness and time-dependent query validity.
 
 ### Game & Simulation
 
