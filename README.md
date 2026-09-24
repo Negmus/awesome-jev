@@ -70,7 +70,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 31 entries
 - [Calibration & Research](categories/calibration-research.md) — 32 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 81 entries
-- [Game & Simulation](categories/game-simulation.md) — 23 entries
+- [Game & Simulation](categories/game-simulation.md) — 24 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 2 entries
 - [Content Moderation](categories/content-moderation.md) — 8 entries
@@ -505,6 +505,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [jev-pilot-reflex](https://github.com/manhua-man/jev-pilot-reflex) ![stars](https://img.shields.io/github/stars/manhua-man/jev-pilot-reflex?style=flat-square&label=%E2%98%85) - Autonomous vehicle simulation: Three.js autonomous driving reflex and AI safety brake simulator using Jev System 1/2 dual-brain architecture for fast emergency intervention.
 - [Magic Jev Ball](https://github.com/mikecann/magic-jev-ball) ![stars](https://img.shields.io/github/stars/mikecann/magic-jev-ball?style=flat-square&label=%E2%98%85) - Gaming: a 3D Magic 8 Ball you hold, shake and let go, where one Convex action asks Jev a `Choice` over the 20 classic answers for the user's question and the page shows Jev's probability for every answer, displaying the highest-probability one because the rounded probabilities occasionally disagree with the reported choice.
 - [Jev-mice](https://mice.jev.carsonsweet.com/) - Simulation: a mouse colony whose behaviour runs through Jev decisions on top of a deterministic engine.
+- [jev-plays](https://github.com/mansicer/jev-plays) ![stars](https://img.shields.io/github/stars/mansicer/jev-plays?style=flat-square&label=%E2%98%85) - Gaming: Craftax (Crafter) survival agent where deterministic code lists every feasible action with its facts and Jev picks one `Choice` per step, optionally guided by an LLM-written objective and standing rules; 3-seed ablations compare Jev over macro and raw actions against random, an LLM choosing every step, and Jev plus the planner.
 
 ### Finance & Trading
 
