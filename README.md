@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 32 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 32 entries
-- [Agent Decisions](categories/agent-decisions.md) — 48 entries
+- [Agent Decisions](categories/agent-decisions.md) — 49 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 27 entries
 - [Calibration & Research](categories/calibration-research.md) — 28 entries
@@ -105,7 +105,7 @@ Optional tags on an entry name the coding agent it targets and the kind of integ
 
 - **Pi** (12) — [pi-jev-router](https://github.com/mejiasd3v/pi-jev-router) · [pi-jev-skill-picker](https://github.com/safzanpirani/pi-jev-skill-picker) · [pi-jev](https://github.com/y0usaf/pi-jev) · [pi-heed](https://github.com/Nyarlathoteppppp/pi-heed) · [pi-verdict](https://github.com/jesset/pi-verdict) · [Reflex](https://github.com/kaustav1996/reflex) · [pi-typesafe-jev](https://github.com/legacybridge-tech/pi-typesafe-jev) · [pi-jev (TheoOliveira)](https://github.com/TheoOliveira/pi-jev) · [pi-quiet-ask](https://github.com/HyunjunJeon/pi-quiet-ask) · [pi-fast-jev-compaction](https://github.com/joelhooks/pi-fast-jev-compaction) · [pi-typesafe-router](https://github.com/jekozyra/pi-typesafe-router) · [Testing Jev for Pi extensions (r/PiCodingAgent)](https://reddit.com/r/PiCodingAgent/comments/1whsav6/anyone_else_testing_out_typesafe_ais_new_system/)
 - **Multi** (11) — [jev-router](https://github.com/gargpratyush/jev-router) · [Switchboard](https://github.com/ruban-24/switchboard) · [jev-guard (leepokai)](https://github.com/leepokai/jev-guard) · [jev-axi](https://github.com/shiftynick/jev-axi) · [yoshi](https://github.com/compozy/yoshi) · [public-browser](https://github.com/Silbercue/public-browser) · [jev-agent-skill](https://github.com/yuyang2230/jev-agent-skill) · [hermes-jev-skills](https://github.com/kerpopule/hermes-jev-skills) · [Jevbridge](https://github.com/tacticocc/Jevbridge) · [jev-use](https://github.com/shitianfang/jev-use) · [jev-mcp (burnigtm)](https://github.com/burnigtm/jev-mcp)
-- **Claude Code** (6) — [jev-skill-router](https://github.com/shimo4228/jev-skill-router) · [Sniff Test](https://github.com/DanRWilloughby/snifftest) · [jev-retrieval](https://github.com/romeromarcelo/jev-retrieval) · [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) · [jev-belay](https://github.com/valentynkit/jev-belay) · [jev-pruner](https://github.com/tamaratran/jev-pruner)
+- **Claude Code** (7) — [jev-skill-router](https://github.com/shimo4228/jev-skill-router) · [Sniff Test](https://github.com/DanRWilloughby/snifftest) · [jev-retrieval](https://github.com/romeromarcelo/jev-retrieval) · [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) · [jev-belay](https://github.com/valentynkit/jev-belay) · [jev-pruner](https://github.com/tamaratran/jev-pruner) · [SkillRanker](https://github.com/Dicklesworthstone/skillranker)
 - **Codex** (5) — [Jev Auto Router](https://github.com/miniLV/Jev-Auto-Router) · [Foreman](https://github.com/thruwire/foreman) · [fast-dev-compaction](https://github.com/leonaaardob/fast-dev-compaction) · [jev-desktop](https://github.com/yikangy873-gif/jev-desktop) · [jev-browser-use](https://github.com/wy-coliney/jev-browser-use)
 - **Cline** (1) — [Cline plugins](https://github.com/cline/plugins)
 
@@ -293,6 +293,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [jev-browser-use](https://github.com/wy-coliney/jev-browser-use) ![agent: Codex](https://img.shields.io/badge/agent-Codex-0D8668?style=flat-square) - Browser automation: lets Jev pick the click while Codex thinks and verifies, reporting 5-10x faster browser operations behind four CI-run contract tests on the bridge.
 - [mobile-jev](https://github.com/droidrun/mobile-jev) - Mobile agents: puts Jev into on-device screen-aware action selection for the Droidrun loop, with a Jev Studio web app streaming live device and decision telemetry.
 - [Jev-cu](https://github.com/Sac-Y/Jev-cu) - Computer use: drives a GUI through Jev decisions with a `jev-decide` script and ships a P0 case set taken from accessibility-tree snapshots of a calculator, a calendar, and the NetEase home screen.
+- [SkillRanker](https://github.com/Dicklesworthstone/skillranker) ![agent: Claude Code](https://img.shields.io/badge/agent-Claude%20Code-C1512C?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) - Coding agents: standalone Rust CLI that uses Jev to rank candidate skills against live session context, advising the next step through a Claude Code UserPromptSubmit hook.
 
 ### Data Labeling & Curation
 
