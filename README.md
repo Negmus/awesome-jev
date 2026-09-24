@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 34 entries
 - [Agent Decisions](categories/agent-decisions.md) — 50 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 30 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 31 entries
 - [Calibration & Research](categories/calibration-research.md) — 30 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 78 entries
 - [Game & Simulation](categories/game-simulation.md) — 22 entries
@@ -349,6 +349,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [jev-fanout-bench](https://github.com/blowxian/jev-fanout-bench) ![stars](https://img.shields.io/github/stars/blowxian/jev-fanout-bench?style=flat-square&label=%E2%98%85) - Model billing: compares batched with one-question-per-call requests across 2,976 calls to `jev-1.13-20260917` through OpenRouter's TypeSafe-compatible `/systemone` endpoint, reporting about 261 fixed input tokens per request, zero spread in the implied per-request cost across question counts, batched-vs-single answer differences comparable to repeat-request noise, and median input-token savings of 76–86% at eight questions.
 - [SystemOneHarness](https://github.com/HarnessRouter/SystemOneHarness) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/HarnessRouter/SystemOneHarness?style=flat-square&label=%E2%98%85) - Model evaluation: execution harness and dual-loop test framework that compiles goals, browser environments, and MCP servers into bounded System One reflexes, evaluating Jev against deterministic baselines.
 - [judgekit](https://github.com/lexingtonhibiki/judgekit) ![stars](https://img.shields.io/github/stars/lexingtonhibiki/judgekit?style=flat-square&label=%E2%98%85) - Model evaluation: runtime judgment engine and benchmark for System One models across Chinese and English classification tasks, evaluating latency, determinism, and cost accounting with YAML task declarations.
+- [Convex Decision Evals](https://www.convex.dev/evals/decision) - Model evaluation: asks Jev a `Choice` on 108 verified four-option questions about the Convex backend platform (no docs or tools in the prompt, each asked 3 times with shuffled options, random guessing 25%) alongside 14 LLMs, where jev-1.13 scores 84.6% at a 199 ms median and $0.0088 per full run against 98.0% at 2.12 s and $1.59 for the top model, with every answer, probability and raw request/response in a public [explorer](https://convex-evals.netlify.app) and the runner in [get-convex/convex-evals](https://github.com/get-convex/convex-evals).
 
 ### Calibration & Research
 
