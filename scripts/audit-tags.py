@@ -32,6 +32,7 @@ SUPPORT = {
     "codex":       r"\bcodex\b",
     "cursor":      r"\bcursor\b",
     "cline":       r"\bcline\b",
+    "dsh":         r"deepseek[ -]?harness|\bdsh\b",
     "multi":       None,
 }
 
