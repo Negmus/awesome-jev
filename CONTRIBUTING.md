@@ -170,6 +170,13 @@ Why weak:
 - No method or threshold
 - Too vague to classify
 
+## Star badges are generated
+
+Do not write a star count or a star badge into an entry. `scripts/build-readme.py`
+appends one to every GitHub entry as a shields.io badge whose URL is derived from
+the entry link, so the number follows the repository instead of going stale and
+regenerating the README always yields the same text (issue #188).
+
 ## Optional tags on an entry
 
 An entry may carry an optional tag block between the link and the separator. The generated `README.md` renders it as a badge, and the badges are what makes the *Find by coding agent* index possible — the one question a list like this cannot answer by scanning prose is "can I use this with the agent I already run?"
