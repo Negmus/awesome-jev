@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 32 entries
 - [Agent Decisions](categories/agent-decisions.md) — 49 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 28 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 29 entries
 - [Calibration & Research](categories/calibration-research.md) — 29 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 76 entries
 - [Game & Simulation](categories/game-simulation.md) — 21 entries
@@ -342,6 +342,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [DecisionBench](https://github.com/Hanno-Labs/decision-bench) ![stars](https://img.shields.io/github/stars/Hanno-Labs/decision-bench?style=flat-square&label=%E2%98%85) - Model evaluation: scores Jev Noul, Choice, and Score answers on pinned document-grounded tasks, counting malformed probability distributions as misses so model comparisons remain reproducible.
 - [jev-regress-bench](https://github.com/redhatpanda/jev-regress-bench) ![stars](https://img.shields.io/github/stars/redhatpanda/jev-regress-bench?style=flat-square&label=%E2%98%85) - Agent regression testing: after a config edit, one `Choice` (same / fact_differs / action_differs / specificity_differs) decides which of an agent's approved answers changed meaning rather than wording, and on 109 before/after pairs whose ground truth is derived from what each config rule does to the answer, Jev catches all 19 real changes with 13 false alarms against 33 for a markers-then-embeddings-then-LLM stack and 19 for the LLM judge alone.
 - [jev-fanout-bench](https://github.com/blowxian/jev-fanout-bench) ![stars](https://img.shields.io/github/stars/blowxian/jev-fanout-bench?style=flat-square&label=%E2%98%85) - Model billing: compares batched with one-question-per-call requests across 2,976 calls to `jev-1.13-20260917` through OpenRouter's TypeSafe-compatible `/systemone` endpoint, reporting about 261 fixed input tokens per request, zero spread in the implied per-request cost across question counts, batched-vs-single answer differences comparable to repeat-request noise, and median input-token savings of 76–86% at eight questions.
+- [SystemOneHarness](https://github.com/HarnessRouter/SystemOneHarness) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/HarnessRouter/SystemOneHarness?style=flat-square&label=%E2%98%85) - Model evaluation: execution harness and dual-loop test framework that compiles goals, browser environments, and MCP servers into bounded System One reflexes, evaluating Jev against deterministic baselines.
 
 ### Calibration & Research
 
