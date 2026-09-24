@@ -68,7 +68,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Agent Decisions](categories/agent-decisions.md) — 50 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 31 entries
-- [Calibration & Research](categories/calibration-research.md) — 31 entries
+- [Calibration & Research](categories/calibration-research.md) — 32 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 81 entries
 - [Game & Simulation](categories/game-simulation.md) — 23 entries
 - [Finance & Trading](categories/finance-trading.md) — 6 entries
@@ -390,6 +390,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [jev-verify](https://github.com/stillmarcus24/jev-verify) ![stars](https://img.shields.io/github/stars/stillmarcus24/jev-verify?style=flat-square&label=%E2%98%85) - Developer tooling: recomputes Jev's confidence and expected-score identities against outputs published in public repositories rather than live API calls, separating vendor-channel examples (10/10) and recorded responses (843/854) from hand-authored fixtures (115/296), where all 121 outputs whose confidence equals the fractional part of their score are concentrated.
 - [AnyJev](https://github.com/nokia-applied-research/AnyJev) ![stars](https://img.shields.io/github/stars/nokia-applied-research/AnyJev?style=flat-square&label=%E2%98%85) - Open research: turns open LLMs into Jev-style decision models that read typed decisions and calibrated probabilities from next-token prefill distributions with zero fine-tuning, reducing order-flip rate and calibration error.
 - [JevK5](https://github.com/allebee/jevk5) ![stars](https://img.shields.io/github/stars/allebee/jevk5?style=flat-square&label=%E2%98%85) - Open alternative: an open-weight model answering yes/no, choice and score questions with a probability per option in one forward pass, reporting about 13 ms on an H100 and 33.1% against Jev's 36.7% on 308 sealed decisions.
+- [Verdict](https://github.com/Manavarya09/verdict) ![stars](https://img.shields.io/github/stars/Manavarya09/verdict?style=flat-square&label=%E2%98%85) - Open alternative: Apache-2.0 118M multilingual bi-encoder that answers `Choice`, `Score`, and `Noul` questions on the same `POST /v1/systemone` wire format, calibrated with temperature scaling plus a split conformal abstain set with a coverage guarantee (ECE 0.01 to 0.03 on the public suites), runs on CPU or in the browser via ONNX, fits on your own labels in seconds, and its README says it loses to Laya on typed decisions (0.71 vs 0.77).
 
 ### Infra / SDKs / Integrations
 
