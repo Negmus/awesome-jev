@@ -10,6 +10,7 @@ Use this category for programs where Jev gates output — verifying claims, revi
 
 ## Entries
 
+- [Edward](https://github.com/VeridicalTech/Edward) - Agent operations: one batched Jev `Choice` over the cross-turn coding-agent trajectory decides continue, pause, or escalate, with low-confidence verdicts routed to a human while deterministic code keeps dangerous-command blocking, budget caps, and an Ed25519-signed receipt chain.
 - [is-malicious](https://github.com/luantak/is-malicious) - Software supply-chain security: asks Jev `Noul` checks about source and build files, escalates suspicious chunks for a second pass, and returns implicated files and lines before execution.
 - [jev-review](https://github.com/devagrawal09/jev-review) - Software engineering: staged code-review workflow and local dashboard where Jev gates each review stage before a change advances.
 - [pi-jev](https://github.com/y0usaf/pi-jev) `{agent: pi, type: plugin}` - Agent safety: adds a measured tool-call gate to the Pi coding agent so risky calls are checked by Jev before execution.
