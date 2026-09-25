@@ -63,7 +63,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 43 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 9 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 35 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 36 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 36 entries
 - [Agent Decisions](categories/agent-decisions.md) — 53 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
@@ -179,6 +179,7 @@ Source file: [`categories/adaptive-realtime-ui.md`](categories/adaptive-realtime
 
 Source file: [`categories/verification-guardrails.md`](categories/verification-guardrails.md)
 
+- [Edward](https://github.com/VeridicalTech/Edward) ![stars](https://img.shields.io/github/stars/VeridicalTech/Edward?style=flat-square&label=%E2%98%85) - Agent operations: one batched Jev `Choice` over the cross-turn coding-agent trajectory decides continue, pause, or escalate, with low-confidence verdicts routed to a human while deterministic code keeps dangerous-command blocking, budget caps, and an Ed25519-signed receipt chain.
 - [is-malicious](https://github.com/luantak/is-malicious) ![stars](https://img.shields.io/github/stars/luantak/is-malicious?style=flat-square&label=%E2%98%85) - Software supply-chain security: asks Jev `Noul` checks about source and build files, escalates suspicious chunks for a second pass, and returns implicated files and lines before execution.
 - [jev-review](https://github.com/devagrawal09/jev-review) ![stars](https://img.shields.io/github/stars/devagrawal09/jev-review?style=flat-square&label=%E2%98%85) - Software engineering: staged code-review workflow and local dashboard where Jev gates each review stage before a change advances.
 - [pi-jev](https://github.com/y0usaf/pi-jev) ![agent: Pi](https://img.shields.io/badge/agent-Pi-8250DF?style=flat-square) ![type: plugin](https://img.shields.io/badge/type-plugin-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/y0usaf/pi-jev?style=flat-square&label=%E2%98%85) - Agent safety: adds a measured tool-call gate to the Pi coding agent so risky calls are checked by Jev before execution.
