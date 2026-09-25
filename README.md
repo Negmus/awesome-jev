@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 44 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 9 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 36 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 36 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 37 entries
 - [Agent Decisions](categories/agent-decisions.md) — 53 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 8 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 32 entries
@@ -256,6 +256,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jev-retrieval](https://github.com/romeromarcelo/jev-retrieval) ![agent: Claude Code](https://img.shields.io/badge/agent-Claude%20Code-C1512C?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/romeromarcelo/jev-retrieval?style=flat-square&label=%E2%98%85) - Coding agents: Rust CLI (`jevr`) that turns a natural-language query into grep-style `path:start-end` targets — a stateless local BM25 pass proposes candidates, Jev `Noul` membership questions score their 100/20-line windows (kept at 0.90 for code, 0.60 for docs), and one listwise `Choice` per lane orders the keepers — ships as a Claude Code skill and plugin, and placed 2nd of 90 models on the HAKARI-Bench NanoRTEB reranking leaderboard.
 - [Vector Graph RAG](https://github.com/zilliztech/vector-graph-rag) ![stars](https://img.shields.io/github/stars/zilliztech/vector-graph-rag?style=flat-square&label=%E2%98%85) - Multi-hop retrieval: uses Jev Noul judgments to score candidate relations and applies a configurable threshold before retrieving their linked documents.
 - [Jev-Code-Reviewer](https://github.com/egma-ai/jev-code-reviewer) ![agent: Multi](https://img.shields.io/badge/agent-Multi-1F6FEB?style=flat-square) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/egma-ai/jev-code-reviewer?style=flat-square&label=%E2%98%85) - Code review: asks Jev for a priority score per changed unit and returns a `priorityGap` that a local uncertainty policy turns into the order a human should read the hunks in, while OpenAI explains the ones that surface.
+- [WorldMonitor](https://github.com/koala73/worldmonitor) ![stars](https://img.shields.io/github/stars/koala73/worldmonitor?style=flat-square&label=%E2%98%85) - Geopolitical intelligence: real-time global intelligence dashboard using TypeSafe Jev questions to score news headline severity into 5 threat levels and categorize events across 14 conflict, cyber, and infrastructure domains.
 
 ### Agent Decisions
 
