@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 9 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 35 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 36 entries
-- [Agent Decisions](categories/agent-decisions.md) — 52 entries
+- [Agent Decisions](categories/agent-decisions.md) — 53 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 32 entries
 - [Calibration & Research](categories/calibration-research.md) — 32 entries
@@ -310,6 +310,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [AutoGPT](https://github.com/Significant-Gravitas/AutoGPT) ![stars](https://img.shields.io/github/stars/Significant-Gravitas/AutoGPT?style=flat-square&label=%E2%98%85) - Autonomous agents: open-source autonomous agent platform featuring first-class TypeSafe Jev decision blocks for typed routing, filtering, scoring, and confidence-gated next-action dispatching.
 - [dsh-jev-decide](https://github.com/nanami-0713/dsh-jev-decide) ![agent: DeepSeek Harness](https://img.shields.io/badge/agent-DeepSeek%20Harness-2D5BD7?style=flat-square) ![stars](https://img.shields.io/github/stars/nanami-0713/dsh-jev-decide?style=flat-square&label=%E2%98%85) - Coding agents: DeepSeek Harness plugin whose single `jev_decide` tool lets the agent ask a `Noul`, `Choice`, or `Score` question about any state — urgency triage, intent routing, guardrail checks — and gate on the returned probability or confidence in code instead of trusting the chat model's guess.
 - [jev-browser-bridge](https://github.com/lexmount/jev-browser-bridge) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/lexmount/jev-browser-bridge?style=flat-square&label=%E2%98%85) - Browser agents: plugs any CDP browser into a Jev loop, where a Jev `Choice` picks the operation and its target element each step from candidates read off the DOM rather than the layout, so the same agent runs on Chrome and on engines that never draw a page (Moli, Lightpanda, Kitesurf), passing at least 90% of runs on each of fourteen browsers tested.
+- [Eliza](https://github.com/elizaOS/eliza) ![stars](https://img.shields.io/github/stars/elizaOS/eliza?style=flat-square&label=%E2%98%85) - Autonomous agents: multi-agent framework integrating TypeSafe System One decision services for sub-100ms intent classification, action dispatching, and confidence-gated tool execution.
 
 ### Data Labeling & Curation
 
