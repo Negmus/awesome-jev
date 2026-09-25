@@ -53,3 +53,4 @@ Use this category for programs where Jev sorts incoming state into categories or
 - [AgentScope](https://github.com/agentscope-ai/agentscope) - Multi-agent platforms: multi-agent platform by Alibaba implementing native TypeSafe Jev classification models for binary, choice, and score routing across agent pipelines.
 - [inbox-zero](https://github.com/elie222/inbox-zero) - Email productivity: open-source AI email assistant that uses TypeSafe Jev System One decision models to classify incoming email intent and triage action items.
 
+- [SiYuan](https://github.com/siyuan-note/siyuan) - Knowledge management: privacy-first personal knowledge management system featuring native Jev decision model integration for high-speed document classification, flashcard intent categorization, and automated tag routing.
