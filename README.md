@@ -71,7 +71,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Calibration & Research](categories/calibration-research.md) — 32 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 82 entries
 - [Game & Simulation](categories/game-simulation.md) — 24 entries
-- [Finance & Trading](categories/finance-trading.md) — 6 entries
+- [Finance & Trading](categories/finance-trading.md) — 7 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 2 entries
 - [Content Moderation](categories/content-moderation.md) — 8 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 86 entries
@@ -523,6 +523,7 @@ Source file: [`categories/finance-trading.md`](categories/finance-trading.md)
 - [Jev X Sentiment Analysis](https://github.com/brainstormity/Jev-X-Sentiment-Analysis) ![stars](https://img.shields.io/github/stars/brainstormity/Jev-X-Sentiment-Analysis?style=flat-square&label=%E2%98%85) - Crypto decision support: ingests 50-1,000 tweets per request through statistical pre-processing and SQLite deduplication, then has Jev turn the surviving evidence into a decision card with entry ranges, stop losses, and targets, without executing trades.
 - [jev-guard (klauswg)](https://github.com/klauswg/jev-guard) ![stars](https://img.shields.io/github/stars/klauswg/jev-guard?style=flat-square&label=%E2%98%85) - Exchange risk operations: screens crypto exchange deposits and withdrawals with Jev triage (risk level, behavioral pattern, freeze probability) while hard rules veto and Java composes the final action, with a published 100-sample three-column calibration against a rules-only baseline.
 - [jev-trader](https://github.com/jarrodwatts/jev-trader) ![stars](https://img.shields.io/github/stars/jarrodwatts/jev-trader?style=flat-square&label=%E2%98%85) - Trading: watches the Kuru MON-USDC book on Monad and asks Jev for a `Choice` between buy and sell every block, publishing 81 ms decision latency and $0.000004 of Jev cost per call from a live dry run.
+- [ai-hedge-fund](https://github.com/virattt/ai-hedge-fund) ![stars](https://img.shields.io/github/stars/virattt/ai-hedge-fund?style=flat-square&label=%E2%98%85) - Quantitative finance: multi-agent AI hedge fund trading system featuring native JevLLM integration to execute fast typed decisions without parsing fragility.
 
 ### Compliance & Legal
 
