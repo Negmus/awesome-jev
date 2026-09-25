@@ -66,7 +66,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Verification & Guardrails](categories/verification-guardrails.md) — 36 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 36 entries
 - [Agent Decisions](categories/agent-decisions.md) — 53 entries
-- [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
+- [Data Labeling & Curation](categories/data-labeling-curation.md) — 8 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 32 entries
 - [Calibration & Research](categories/calibration-research.md) — 33 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 82 entries
@@ -326,6 +326,7 @@ Source file: [`categories/data-labeling-curation.md`](categories/data-labeling-c
 - [jgrep](https://github.com/keltokhy/jgrep) ![stars](https://img.shields.io/github/stars/keltokhy/jgrep?style=flat-square&label=%E2%98%85) - Data filtering: filters text, structured records, functions, and diff hunks against plain-English descriptions using Jev Noul judgments.
 - [jevgrep (allebee)](https://github.com/allebee/jevgrep) ![stars](https://img.shields.io/github/stars/allebee/jevgrep?style=flat-square&label=%E2%98%85) - Log triage: filters logs and other text streams, including live `tail -f` output, by asking Jev one Noul per line against a plain-English question and printing lines at or above a probability threshold, with a hand-labelled benchmark against Claude in the repository.
 - [jev-research-pipeline](https://github.com/shimo4228/jev-research-pipeline) ![stars](https://img.shields.io/github/stars/shimo4228/jev-research-pipeline?style=flat-square&label=%E2%98%85) - Research monitoring: asks Jev Noul gates and Score dimensions per (paper, research question) on each daily fetch through Pydantic AI's typesafe model, keeps sources above a code-side threshold, and hands them to Qwen for question-centric Obsidian notes; offline tests replay recorded cassettes.
+- [GroundingJev](https://github.com/xyzzzh/GroundingJev) ![stars](https://img.shields.io/github/stars/xyzzzh/GroundingJev?style=flat-square&label=%E2%98%85) - Visual annotation: a Jev-inspired Qwen3.5-0.8B model that maps an image and referring expression to four bounding-box coordinates in one forward pass, reporting an 8.61× inference speedup over its autoregressive base model.
 
 ### Evaluation & Benchmarking
 
