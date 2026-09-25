@@ -68,7 +68,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Agent Decisions](categories/agent-decisions.md) — 54 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 8 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 32 entries
-- [Calibration & Research](categories/calibration-research.md) — 33 entries
+- [Calibration & Research](categories/calibration-research.md) — 34 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 82 entries
 - [Game & Simulation](categories/game-simulation.md) — 24 entries
 - [Finance & Trading](categories/finance-trading.md) — 7 entries
@@ -405,6 +405,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [JevK5](https://github.com/allebee/jevk5) ![stars](https://img.shields.io/github/stars/allebee/jevk5?style=flat-square&label=%E2%98%85) - Open alternative: an open-weight model answering yes/no, choice and score questions with a probability per option in one forward pass, reporting about 13 ms on an H100 and 33.1% against Jev's 36.7% on 308 sealed decisions.
 - [Verdict](https://github.com/Manavarya09/verdict) ![stars](https://img.shields.io/github/stars/Manavarya09/verdict?style=flat-square&label=%E2%98%85) - Open alternative: Apache-2.0 118M multilingual bi-encoder that answers `Choice`, `Score`, and `Noul` questions on the same `POST /v1/systemone` wire format, calibrated with temperature scaling plus a split conformal abstain set with a coverage guarantee (ECE 0.01 to 0.03 on the public suites), runs on CPU or in the browser via ONNX, fits on your own labels in seconds, and its README says it loses to Laya on typed decisions (0.71 vs 0.77).
 - [Jev-MedQA](https://github.com/Ztrura/Jev-MedQA) ![stars](https://img.shields.io/github/stars/Ztrura/Jev-MedQA?style=flat-square&label=%E2%98%85) - Medical QA: a Jev-style implementation on Qwen3.5-4B that selects answers to text and image questions in one forward pass, reporting 69.42% accuracy versus 67.41% for standard generation with a 10.37x speedup across 153,889 questions from nine medical QA benchmark sets.
+- [Jev Prime](https://github.com/xucian/talktojev) ![type: hosted](https://img.shields.io/badge/type-hosted-4B5563?style=flat-square) ![stars](https://img.shields.io/github/stars/xucian/talktojev?style=flat-square&label=%E2%98%85) - Text generation: a conversational agent with no language model, where every word is picked from ~4,700 options by Jev `Choice` questions one at a time, with confidence driving lookahead when the top pick falls below 0.65, beam search across sentence directions, and a self-critique loop that rewrites sentences scoring below threshold; live at talktojev.com, paper at doi.org/10.5281/zenodo.22940945.
 
 ### Infra / SDKs / Integrations
 
